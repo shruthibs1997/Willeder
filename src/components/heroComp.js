@@ -1,11 +1,25 @@
 import styled from "styled-components";
-import Laptop2 from "../Images/Laptop2.png"
+import { useState,useEffect } from "react";
+import Laptop1 from "../Images/Laptop1.png";
+import Laptop2 from "../Images/Laptop2.png";
+import Laptop3 from "../Images/Laptop3.png"
 import LogoComp from "./logoComp";
 import NavComp from "./navComp";
 
+const images = [Laptop1, Laptop2, Laptop3];
+
 const HeroComp =()=>{
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setIndex(prevIndex => (prevIndex + 1) % images.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
     return(
-        <HeroCompStyle imageUrl={Laptop2}>
+        <HeroCompStyle imageUrl={images[index]}>
             <NavComp/>
             <LogoComp/>
             <div className="heading"> Lorem ipsum dolor sit amet </div>
