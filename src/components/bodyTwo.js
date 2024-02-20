@@ -121,13 +121,12 @@ const BodyTwoStyle = styled.div`
         .heading{
             top: 80px;
             left: 0%;
-            padding-left: 2%;
+            padding-left: 3%;
             width: 81%;
             text-align: left;
             font-size: 20px;
             font-weight: 600;
             line-height: 32px;
-            letter-spacing: 2px;
         }
         .line{
             position: absolute;
@@ -150,11 +149,11 @@ const BodyTwoStyle = styled.div`
             left: 0%;
             width: 83%;
             height: 200px;
+            padding-left: 3%;
             .description{
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 21px;
-                padding-left: 2%;
             }
             .buttonComp{
                 width: 100%;
